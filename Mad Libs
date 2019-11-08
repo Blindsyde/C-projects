@@ -1,0 +1,64 @@
+using System;
+
+namespace MadLibs
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      /*
+      This program is used to run Mad Libs
+      Author: Brendan
+      */
+
+
+      // Let the user know that the program is starting:
+      Console.WriteLine("Program: Mad Libs has started...");
+
+      // Give the Mad Lib a title:
+      string title = "Mad Libs";
+
+      Console.WriteLine(title);
+      // Define user input and variables:
+      Console.WriteLine("Enter a name");
+      string name = Console.ReadLine();
+      Console.WriteLine("Enter an Adjective");
+      string Adj1 = Console.ReadLine();
+      Console.WriteLine("Enter another Adjective");
+      string Adj2 = Console.ReadLine();
+      Console.WriteLine("Enter one more Adjective");
+      string Adj3 = Console.ReadLine();
+      Console.WriteLine("Enter a Verb");
+      string Verb = Console.ReadLine();
+      Console.WriteLine("Enter a Noun");
+      string Noun1 = Console.ReadLine();
+      Console.WriteLine("Enter one more noun");
+      string Noun2 = Console.ReadLine();
+      Console.WriteLine("Please input one of the following:\n An animal \n");
+      string animal = Console.ReadLine();
+      Console.WriteLine("A food");
+      string food = Console.ReadLine();
+      Console.WriteLine("A fruit");
+      string fruit = Console.ReadLine();
+      Console.WriteLine("A superhero");
+      string superhero = Console.ReadLine();
+      Console.WriteLine("A country");
+      string country = Console.ReadLine();
+      Console.WriteLine("A dessert");
+      string dessert = Console.ReadLine();
+      Console.WriteLine("A year");
+      string year = Console.ReadLine();
+      
+
+      // The template for the story:
+
+      string story = $"This morning {name} woke up feeling {Adj1}. 'It is going to be a {Adj2} day!' Outside, a bunch of {animal}s were protesting to keep {food} in stores. They began to {Verb} to the rhythm of the {Noun1}, which made all the {fruit}s very {Adj3}. Concerned, {name} texted {superhero}, who flew {name} to {country} and dropped {name} in a puddle of frozen {dessert}. {name} woke up in the year {year}, in a world where {Noun2}s ruled the world.";
+
+
+      // Print the story:
+      Console.WriteLine("Okay thank you, hit Enter to see your new story!");
+      Console.ReadLine();
+      Console.WriteLine(story);
+    }
+  }
+}
