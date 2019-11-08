@@ -1,0 +1,36 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		//Base starting information
+		Console.WriteLine("Welcome to Money Maker!");
+		Console.WriteLine("What is the total amount of cents to convert?");
+		string total = Console.ReadLine();
+		double newTotal = Convert.ToDouble(total);
+		//Console.WriteLine($"{newTotal} cents is equal to...");
+		Console.WriteLine(newTotal + " cents is equal to...");
+		Console.ReadLine();
+
+		//Conversion variables
+		int dollar = 100;
+		int quarter = 25;
+		int dime = 10;
+		int nickel = 5;
+
+		//Remainder calculation tree
+		double dollars = Math.Floor(newTotal / dollar);
+		double remainder = newTotal % dollar;
+		double quarters = Math.Floor(remainder / quarter);
+		double remainder2 = newTotal % quarter;
+		double dimes = Math.Floor(remainder2 / dime);
+		double remainder3 = newTotal % dime;
+		double nickels = Math.Floor(remainder3 / nickel);
+		double remainder4 = newTotal % nickel;
+
+		//Output for both standard and non
+		//Console.WriteLine($" Dollars: {dollars} \n Quarters: {quarters} \n Dimes: {dimes} \n Nickels: {nickels} \n Penny: {remainder4}");
+		Console.WriteLine("Dollars: " + dollars + "\n" + "Quarters: " + quarters + "\n" + "Dimes: " + dimes + "\n" + "Nickels: " + nickels + "\n" + "Penny: " + remainder4 + "\n");
+	}
+}
